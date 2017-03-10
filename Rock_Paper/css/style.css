@@ -1,0 +1,139 @@
+    .filter-me {
+        filter: <filter-function> [<filter-function>]* | none
+    }
+
+    body {
+        text-align: center;
+        background: linear-gradient(to bottom right, #C9E5E5, #E0FFFF, #F2FFFF, #E0FFFF, #C9E5E5);
+        font-family: 'Permanent Marker', cursive;
+        text-shadow: 5px 5px powderblue;
+        font-size: 100%;
+    }
+
+    div.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul#scoreBoardGuesses {
+        align-items: flex-end;
+    }
+
+    .scoreBoardLi {
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+
+    .resultLi {
+        margin-left: 15vh;
+        margin-right: 15vh;
+    }
+
+    .images {
+        margin-left: 5%;
+        margin-right: 5%;
+        display: inline-block;
+        mix-blend-mode: luminosity;
+    }
+
+    .imageSelection {
+        height: 80px;
+        width: 80px;
+        border-radius: 50px;
+        border: 1px solid gray;
+        mix-blend-mode: luminosity;
+        box-shadow: 5px 5px;
+    }
+
+    .imageSelection:hover {
+        cursor: pointer;
+    }
+
+    modal {
+        line-height: 300%;
+        position: absolute;
+    }
+
+    .finalScoreModal {
+        border: 1px solid gainsboro;
+        border-radius: 2%;
+        width: 40vh;
+        background-color: beige;
+        box-shadow: 10px 10px 10px dimgrey;
+        filter: sepia(2) hue-rotate(10deg);
+    }
+
+    .finalScoreModal>button {
+        background-color: burlywood;
+        text-shadow: coral;
+        font-family: inherit;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    .fade {
+        opacity: 0;
+    }
+
+    .fade-add, .fade-remove {
+        opacity: 1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+
+    .fade-add-active {
+        opacity: 0;
+    }
+
+    .fade-remove {
+        opacity: 0;
+    }
+
+    .fade-remove-active {
+        opacity: 1;
+    }
+
+    .winner, h5 {
+        margin: 0;
+    }
+
+    .ng-hide-add {
+        animation: 1s moving ease;
+    }
+
+    .ng-hide-remove {
+        animation: 0.5s fading ease;
+    }
+
+    @keyframes fading {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes moving {
+        0% {
+            width: 40vh;
+            height: initial;
+        }
+        100% {
+            width: 0;
+            height: 0;
+        }
+    }
